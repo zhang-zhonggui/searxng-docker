@@ -26,8 +26,8 @@ services:
       - searxng
       - ext # 添加到ext网络以便与LobeChat通信
     labels:
-    caddy: lobe.mxmx.asia  # 替换为你想用的域名
-    caddy.reverse_proxy: "{{upstreams 8080}}"
+      caddy: lobe.mxmx.asia  # 替换为你想用的域名
+      caddy.reverse_proxy: "{{upstreams 8080}}"
     
     volumes:
       - valkey-data2:/data
